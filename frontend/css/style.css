@@ -1,0 +1,84 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f6f9; color: #333; }
+header {
+  background: #2c3e50; color: white; padding: 1rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+header h1 { font-size: 1.3rem; }
+#user-info { display: flex; gap: 1rem; align-items: center; }
+#user-info button {
+  background: #e74c3c; color: white; border: none;
+  padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;
+}
+main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+.toolbar {
+  display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+}
+.toolbar button, .toolbar select {
+  padding: 0.5rem 1rem; border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer;
+}
+.toolbar button { background: #3498db; color: white; border: none; }
+.doc-card {
+  background: white; padding: 1rem 1.5rem; margin-bottom: 1rem;
+  border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.doc-card .doc-info { flex: 1; }
+.doc-card h3 { margin-bottom: 0.3rem; color: #2c3e50; }
+.doc-card .meta { font-size: 0.85rem; color: #7f8c8d; }
+.badge {
+  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 12px;
+  font-size: 0.75rem; color: white; margin-right: 0.3rem;
+}
+.badge.incoming { background: #3498db; }
+.badge.outgoing { background: #9b59b6; }
+.badge.internal { background: #16a085; }
+.badge.draft { background: #95a5a6; }
+.badge.on_review { background: #f39c12; }
+.badge.approved { background: #27ae60; }
+.badge.rejected { background: #c0392b; }
+.doc-actions button {
+  margin-left: 0.3rem; padding: 0.3rem 0.7rem; border: none;
+  border-radius: 4px; cursor: pointer; color: white;
+}
+.btn-edit { background: #f39c12; }
+.btn-delete { background: #e74c3c; }
+#document-form {
+  background: white; padding: 2rem; border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 1rem;
+}
+#document-form label { display: block; margin-bottom: 1rem; }
+#document-form input, #document-form select, #document-form textarea {
+  width: 100%; padding: 0.5rem; margin-top: 0.3rem;
+  border: 1px solid #ccc; border-radius: 4px; font-family: inherit;
+}
+.form-actions { display: flex; gap: 0.5rem; }
+.form-actions button {
+  padding: 0.6rem 1.2rem; border: none; border-radius: 4px;
+  cursor: pointer; color: white;
+}
+.form-actions button[type="submit"] { background: #27ae60; }
+.form-actions button[type="button"] { background: #95a5a6; }
+
+.auth-page {
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; background: linear-gradient(135deg, #667eea, #764ba2);
+}
+.auth-box {
+  background: white; padding: 2.5rem; border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 100%; max-width: 400px;
+}
+.auth-box h1 { margin-bottom: 1.5rem; text-align: center; color: #2c3e50; }
+.auth-box label { display: block; margin-bottom: 1rem; }
+.auth-box input {
+  width: 100%; padding: 0.6rem; margin-top: 0.3rem;
+  border: 1px solid #ccc; border-radius: 4px;
+}
+.auth-box button {
+  width: 100%; padding: 0.7rem; background: #3498db; color: white;
+  border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.auth-box p { text-align: center; margin-top: 1rem; }
+.auth-box .hint { font-size: 0.8rem; color: #7f8c8d; margin-top: 0.5rem; }

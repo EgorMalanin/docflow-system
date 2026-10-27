@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система управления документами</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>📄 Система управления документами</h1>
+    <div id="user-info"></div>
+  </header>
+
+  <main id="main-content" style="display:none;">
+    <section class="toolbar">
+      <button id="btn-new">➕ Новый документ</button>
+      <select id="filter-type">
+        <option value="">Все типы</option>
+        <option value="incoming">Входящие</option>
+        <option value="outgoing">Исходящие</option>
+        <option value="internal">Внутренние</option>
+      </select>
+      <select id="filter-status">
+        <option value="">Все статусы</option>
+        <option value="draft">Черновик</option>
+        <option value="on_review">На согласовании</option>
+        <option value="approved">Подписан</option>
+        <option value="rejected">Отклонён</option>
+      </select>
+    </section>
+
+    <section id="documents-list"></section>
+
+    <section id="document-form" style="display:none;">
+      <h2 id="form-title">Новый документ</h2>
+      <form id="doc-form">
+        <input type="hidden" id="doc-id">
+        <label>Тема: <input type="text" id="doc-topic" required></label>
+        <label>Тип:
+          <select id="doc-type" required>
+            <option value="incoming">Входящий</option>
+            <option value="outgoing">Исходящий</option>
+            <option value="internal">Внутренний</option>
+          </select>
+        </label>
+        <label>Статус:
+          <select id="doc-status">
+            <option value="draft">Черновик</option>
+            <option value="on_review">На согласовании</option>
+            <option value="approved">Подписан</option>
+            <option value="rejected">Отклонён</option>
+          </select>
+        </label>
+        <label>Содержание: <textarea id="doc-content" rows="6"></textarea></label>
+        <div class="form-actions">
+          <button type="submit">💾 Сохранить</button>
+          <button type="button" id="btn-cancel">Отмена</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/documents.js"></script>
+</body>
+</html>
